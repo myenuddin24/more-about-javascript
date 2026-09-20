@@ -281,3 +281,94 @@ C
 B
 */
 
+
+
+
+/* ----------- Error Handling: try, catch, throw and finally ------------ */
+/*
+Error Handling:
+- Error handling is used to handle errors without stopping
+  the entire program unexpectedly.
+
+1. try:
+- The try block contains code that may produce an error.
+
+Example:
+try {
+  console.log(x);
+}
+
+
+2. catch:
+- The catch block handles the error if an error occurs
+  inside the try block.
+- The error object contains information about the error.
+
+Example:
+try {
+  console.log(x);
+} catch (error) {
+  console.log(error);
+}
+
+
+3. throw:
+- throw is used to create and throw a custom error.
+- The error thrown by throw can be caught by the catch block.
+- It can be used when we want to stop execution and report
+  a specific problem.
+
+
+Example:
+
+try {
+  const age = 15;
+
+  if (age < 18) {
+    throw "You are not eligible";
+  }
+} catch (error) {
+  console.log(error);
+}
+
+Output:
+You are not eligible
+
+
+Important:
+- throw -> throws an error
+- catch -> catches the thrown error
+
+
+4. finally:
+- The finally block executes whether an error occurs or not.
+- It is commonly used for cleanup tasks.
+
+Example:
+try {
+  console.log("Try");
+} catch (error) {
+  console.log("Catch");
+} finally {
+  console.log("Finally");
+}
+
+
+Important:
+try     -> contains risky code
+catch   -> handles the error
+throw   -> creates/throws a custom error
+finally -> executes at the end, whether error occurs or not
+
+
+Basic Structure:
+
+try {
+  // code that may cause an error
+} catch (error) {
+  // handle the error
+} finally {
+  // always executes
+}
+*/
+
